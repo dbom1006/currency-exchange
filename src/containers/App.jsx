@@ -63,9 +63,9 @@ function App() {
 
   const isAvailableExchange = useMemo(() => {
     return (
-      amountFrom && amountTo && walletFrom?.id !== walletTo?.id && !errorFrom
+      amountFrom && amountTo && walletFrom?.id !== walletTo?.id && !errorFrom && !isNaN(parseFloat(rate))
     );
-  }, [amountFrom, amountTo, errorFrom, walletFrom, walletTo]);
+  }, [amountFrom, amountTo, errorFrom, walletFrom, walletTo, rate]);
 
   return (
     <div className="w-full h-screen flex justify-center items-center bg-gray-800">
@@ -187,7 +187,7 @@ function App() {
           Exchange
         </button>
       </div>
-      <p className="absolute bottom-0 pb-4 text-gray-500 text-sm">Created by Duc Thai - 6.Nov.2021</p>
+      <p className="fixed bottom-0 pb-4 text-gray-500 text-sm">Created by Duc Thai - 6.Nov.2021</p>
     </div>
   );
 }
