@@ -73,7 +73,7 @@ function App() {
         <h1 className="text-2xl text-gray-200 font-semibold">
           Currency Exchange
         </h1>
-        <div className="bg-white p-6 rounded-lg space-y-6 w-96">
+        <div className="bg-white p-6 rounded-lg space-y-6 w-full md:w-96">
           <div className="flex justify-between">
             {CURRENCY.map((cur) => (
               <button
@@ -134,7 +134,7 @@ function App() {
             </span>
           )}
         </div>
-        <div className="bg-white p-6 rounded-lg space-y-6 w-96">
+        <div className="bg-white p-6 rounded-lg space-y-6 w-full md:w-96">
           <div className=" flex justify-between">
             {CURRENCY.map((cur) => (
               <button
